@@ -17,7 +17,7 @@ struct Keychain {
     /// Scopes an item to this application and server, so a lookup cannot match an item
     /// belonging to another application.
     private func service(for server: String) -> String {
-        "com.nextcloud.desktopclient:\(server)"
+        "\(Bundle.main.bundleIdentifier ?? "NextcloudFileProviderKit"):\(server)"
     }
 
     ///
